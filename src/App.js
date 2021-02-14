@@ -1,9 +1,12 @@
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as CounterActions from './redux/actions/counter';
 import * as UserActions from './redux/actions/user';
 
-function App({counter, user, increment, decrement, upSalary, downSalary}) {
+function App({increment, decrement, upSalary, downSalary}) {
+  const user = useSelector(state => state.user)
+  const counter = useSelector(state => state.counter.counter)
+
   return (
     <div className="App">
       <h1>Hello World! You are login as {user.user}</h1>
