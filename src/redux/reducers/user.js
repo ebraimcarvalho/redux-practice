@@ -1,3 +1,5 @@
+import { UP_SALARY, DOWN_SALARY } from '../types';
+
 const initialState = {
   user: 'Ebraim Carvalho',
   job: 'Front-End Developer',
@@ -6,12 +8,12 @@ const initialState = {
 
 export function userReducer(state = initialState, action) {
   switch (action.type) {
-    case 'UP_SALARY':
+    case UP_SALARY:
       return {
         ...state,
         salary: state.salary + action.payload.amount
       }
-    case 'DOWN_SALARY':
+    case DOWN_SALARY:
       if (state.salary > 0) {
         return {
           ...state,

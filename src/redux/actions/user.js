@@ -1,6 +1,8 @@
+import { UP_SALARY, DOWN_SALARY } from '../types';
+
 export function upSalary(value) {
   return {
-    type: 'UP_SALARY',
+    type: UP_SALARY,
     payload: {
       amount: value
     }
@@ -9,7 +11,7 @@ export function upSalary(value) {
 
 export function downSalary(value) {
   return {
-    type: 'DOWN_SALARY',
+    type: DOWN_SALARY,
     payload: {
       amount: value
     }

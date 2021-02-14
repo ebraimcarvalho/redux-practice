@@ -1,15 +1,17 @@
+import { INCREMENT, DECREMENT } from '../types';
+
 const initialState = {
   counter: 0
 }
 
 export function counterReducer(state = initialState, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case INCREMENT:
       return {
         ...state,
         counter: state.counter + 1
       }  
-    case 'DECREMENT': 
+    case DECREMENT: 
       if(state.counter > 0) {
         return {
           ...state,
